@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Register with us.</title>
+	</head>
+
+	<body>
+		<h1> Register with QReddit </h1>
+	
+		{% if registered %}
+		<h3>Qreddit</h3><strong> Thanks for registering with us.</strong> <br />
+		{% else %}
+		<strong>Register here</strong><br />
+
+		<!--form id="user_form" method="POST" action = "/tango/register/" enctypes="multipart/form-data"> -->
+		<form id="user_form" method="post" action="/tango/register/">
+			{% csrf_token %}
+
+			{{ user_form.as_p }}
+			{{ profile_form.as_p }}
+
+			<input type = "submit" name="submit", value="Register" />
+		</form>
+		{% endif %}
+
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Rango</title>
+		</head>
+		<body>
+			<h1>Categories</h1>
+			{% if cat %}
+				{{for cat in cats}}
+					<h3><a href = "cat"{{ cat.name }}
+			{% else %}
+				The specified category {{ category_name }} does not exist!
+			{% endif %}
+		</body>
+	</html>

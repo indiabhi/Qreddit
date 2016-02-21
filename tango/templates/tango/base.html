@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+<html>
+	<head>
+		<title>Rango - {% block title %}  Your favorite manager! {% endblock %} </title>
+	</head>
+	
+	<body>
+	<div>
+		{% block body_block %} {% endblock %}
+	</div>
+
+	<hr />
+
+	<div>
+		<ul>
+			{% if user.is_authenticated %}
+				<li><a href="/tango/"> Home </a></li>
+				<li><a href="/tango/profile/">Profile</a></li>
+				<li><a href="/tango/restricted/"> Horror House </a></li>
+				<li><a href="/tango/logout/">Logout </a>
+				</li>
+				<li><a href="/tango/add_category/">Add a New Category </a>
+				</li>
+			{% else %}
+				<li><a href="/tango/"> Home </a></li>
+				<li><a href="/tango/register/">Register Here </a>
+				</li>
+				<li><a href="/tango/login/">Login </a>
+				</li>
+			{% endif %}
+
+			<li><a href="/tango/about/">About </a>
+				</li>
+		</ul>
+	</div>
+
+
+
+	</body>
+
+
+
+</html>
