@@ -195,7 +195,7 @@ def user_login(request):
 				return HttpResponse("Your acccount is disabled")
 
 		else:
-			print "Invalid login details [0], [1]".format[username, password]
+			print "Invalid login details {}, {}".format[username, password]
 			return HttpResponse("Invalid login details supplied.")
 
 	else:
